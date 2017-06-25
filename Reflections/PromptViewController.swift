@@ -2,6 +2,7 @@ import UIKit
 
 class PromptViewController: UIViewController {
     var flippedView = false
+    var content = Content()
     
     // MARK: Front view
     @IBOutlet weak var frontView: UIView!
@@ -20,12 +21,11 @@ class PromptViewController: UIViewController {
         let toView = flippedView ? backView : frontView
         
         UIView.transition(from: fromView!, to: toView!, duration: 0.4, options: [.transitionFlipFromLeft, .showHideTransitionViews])
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
     
 }
