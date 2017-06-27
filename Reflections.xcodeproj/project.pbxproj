@@ -57,8 +57,8 @@
 		16517A6D1F00234E00EFFCE8 /* ReflectionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionsUITests.swift; sourceTree = "<group>"; };
 		16517A6F1F00234E00EFFCE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16517A7D1F00258B00EFFCE8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		16517A811F002FBE00EFFCE8 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Content.swift; path = Reflections/Content.swift; sourceTree = "<group>"; };
-		16517A851F0030A100EFFCE8 /* RandomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RandomModel.swift; path = Reflections/RandomModel.swift; sourceTree = "<group>"; };
+		16517A811F002FBE00EFFCE8 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		16517A851F0030A100EFFCE8 /* RandomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +89,6 @@
 		16517A411F00234E00EFFCE8 = {
 			isa = PBXGroup;
 			children = (
-				16517A811F002FBE00EFFCE8 /* Content.swift */,
-				16517A851F0030A100EFFCE8 /* RandomModel.swift */,
 				16517A4C1F00234E00EFFCE8 /* Reflections */,
 				16517A611F00234E00EFFCE8 /* ReflectionsTests */,
 				16517A6C1F00234E00EFFCE8 /* ReflectionsUITests */,
@@ -111,6 +109,8 @@
 		16517A4C1F00234E00EFFCE8 /* Reflections */ = {
 			isa = PBXGroup;
 			children = (
+				16517A811F002FBE00EFFCE8 /* Content.swift */,
+				16517A851F0030A100EFFCE8 /* RandomModel.swift */,
 				16517A4D1F00234E00EFFCE8 /* AppDelegate.swift */,
 				16517A4F1F00234E00EFFCE8 /* PromptViewController.swift */,
 				16517A511F00234E00EFFCE8 /* Main.storyboard */,
@@ -550,6 +550,7 @@
 				16517A741F00234F00EFFCE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16517A751F00234F00EFFCE8 /* Build configuration list for PBXNativeTarget "ReflectionsTests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +559,7 @@
 				16517A771F00234F00EFFCE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16517A781F00234F00EFFCE8 /* Build configuration list for PBXNativeTarget "ReflectionsUITests" */ = {
 			isa = XCConfigurationList;
@@ -566,6 +568,7 @@
 				16517A7A1F00234F00EFFCE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

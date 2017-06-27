@@ -3,6 +3,7 @@ import UIKit
 class PromptViewController: UIViewController {
     var flippedView = false
     var content = Content()
+    var random = RandomModel()
     
     // MARK: Front view
     @IBOutlet weak var frontView: UIView!
@@ -26,6 +27,10 @@ class PromptViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let lists = [content.questionsList, content.answersList]
+        let randomTypeIndex = random.generateRandomItem(from: lists)
+        let randomPromptIndex = random.generateRandomItem(from: lists[randomTypeIndex])
+        print(lists[randomTypeIndex][randomPromptIndex])
     }
     
 }
