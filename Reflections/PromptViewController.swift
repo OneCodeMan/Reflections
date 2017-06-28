@@ -4,6 +4,8 @@ class PromptViewController: UIViewController {
     var flippedView = false
     var content = Content()
     var random = RandomModel()
+    let contentTypeLabels = ["?", "!"]
+    var lists: [[String]]!
     
     // MARK: Front view
     @IBOutlet weak var frontView: UIView!
@@ -14,6 +16,8 @@ class PromptViewController: UIViewController {
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var promptTextLabel: UILabel!
     @IBOutlet weak var backInstructionLabel: UILabel!
+    
+    let swipeRightGesture = UISwipeGestureRecognizer()
     
     @IBAction func flipButton(_ sender: Any) {
         flippedView = !flippedView
@@ -27,10 +31,19 @@ class PromptViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let lists = [content.questionsList, content.answersList]
-        let randomTypeIndex = random.generateRandomItem(from: lists)
-        let randomPromptIndex = random.generateRandomItem(from: lists[randomTypeIndex])
-        print(lists[randomTypeIndex][randomPromptIndex])
+        lists = [content.questionsList, content.answersList]
+        updatePrompt()
+        
+        swipeRightGesture.addTarget(self, action: #selector(updatePrompt))
+        swipeRightGesture.direction = .right
+        self.view!.addGestureRecognizer(swipeRightGesture)
+    }
+    
+    @objc func updatePrompt() {
+        let randomTypeIndex = random.generateRandomIndex(from: lists)
+        let randomPromptIndex = random.generateRandomIndex(from: lists[randomTypeIndex])
+        promptTypeLabel.text = contentTypeLabels[randomTypeIndex]
+        promptTextLabel.text = lists[randomTypeIndex][randomPromptIndex]
     }
     
 }
