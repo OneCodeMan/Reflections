@@ -2,17 +2,17 @@ import UIKit
 
 class PromptViewController: UIViewController {
     var flippedView = false
+    
     var content = Content()
     var random = RandomModel()
+    
     let contentTypeLabels = ["?", "!"]
     var lists: [[String]]!
     
-    // MARK: Front view
     @IBOutlet weak var frontView: UIView!
     @IBOutlet weak var promptTypeLabel: UILabel!
     @IBOutlet weak var frontInstructionLabel: UILabel!
     
-    // MARK: Back view
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var promptTextLabel: UILabel!
     @IBOutlet weak var backInstructionLabel: UILabel!
