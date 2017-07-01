@@ -57,6 +57,12 @@ class PromptViewController: UIViewController {
         fadeLabel(label: frontInstructionLabel, delay: 0)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        fadeLabel(label: backInstructionLabel, delay: 0)
+        fadeLabel(label: frontInstructionLabel, delay: 0)
+    }
+    
     @objc func updatePrompt() {
         
         if (canFlip) {
