@@ -86,6 +86,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		163360291F07F598009F12F9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				16517A851F0030A100EFFCE8 /* RandomModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1633602A1F07F5A3009F12F9 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				16517A811F002FBE00EFFCE8 /* Content.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		1633602B1F07F5B1009F12F9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				16517A7D1F00258B00EFFCE8 /* HomeViewController.swift */,
+				16517A4F1F00234E00EFFCE8 /* PromptViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		16517A411F00234E00EFFCE8 = {
 			isa = PBXGroup;
 			children = (
@@ -109,15 +134,14 @@
 		16517A4C1F00234E00EFFCE8 /* Reflections */ = {
 			isa = PBXGroup;
 			children = (
-				16517A811F002FBE00EFFCE8 /* Content.swift */,
-				16517A851F0030A100EFFCE8 /* RandomModel.swift */,
+				1633602B1F07F5B1009F12F9 /* ViewControllers */,
+				1633602A1F07F5A3009F12F9 /* Content */,
+				163360291F07F598009F12F9 /* Models */,
 				16517A4D1F00234E00EFFCE8 /* AppDelegate.swift */,
-				16517A4F1F00234E00EFFCE8 /* PromptViewController.swift */,
 				16517A511F00234E00EFFCE8 /* Main.storyboard */,
 				16517A541F00234E00EFFCE8 /* Assets.xcassets */,
 				16517A561F00234E00EFFCE8 /* LaunchScreen.storyboard */,
 				16517A591F00234E00EFFCE8 /* Info.plist */,
-				16517A7D1F00258B00EFFCE8 /* HomeViewController.swift */,
 			);
 			path = Reflections;
 			sourceTree = "<group>";
