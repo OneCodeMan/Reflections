@@ -34,6 +34,11 @@ class PromptViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        promptTypeLabel.textColor = UIColor.CustomColor.Black.Licorice
+        frontInstructionLabel.textColor = UIColor.CustomColor.Black.Licorice
+        promptTextLabel.textColor = UIColor.CustomColor.Black.Licorice
+        backInstructionLabel.textColor = UIColor.CustomColor.Black.Licorice
+        
         lists = [content.questionsList, content.answersList, content.phraseList]
         updatePrompt()
         
@@ -48,7 +53,15 @@ class PromptViewController: UIViewController {
             let randomPromptIndex = random.generateRandomIndex(from: lists[randomTypeIndex])
             promptTypeLabel.text = contentTypeLabels[randomTypeIndex]
             promptTextLabel.text = lists[randomTypeIndex][randomPromptIndex]
+            changeBackgroundColor(to: .red)
         } 
+    }
+    
+    // MARK: Background color helper 
+    func changeBackgroundColor(to color: UIColor) {
+        self.frontView.backgroundColor = color
+        self.backView.backgroundColor = color
+        self.view.backgroundColor = color
     }
     
 }
