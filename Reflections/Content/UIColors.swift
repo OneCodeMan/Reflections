@@ -5,7 +5,7 @@ class BackgroundColors {
     
     let backgroundColors = [UIColor.CustomColor.Red.Fuzzy, UIColor.CustomColor.Orange.BigFoot ,UIColor.CustomColor.Blue.Liberty, UIColor.CustomColor.Blue.Sapphire,
                             UIColor.CustomColor.Yellow.Tan, UIColor.CustomColor.Yellow.Grain, UIColor.CustomColor.Green.LightSea, UIColor.CustomColor.Gray.SilverSand,
-                            UIColor.CustomColor.White.Gainsboro, UIColor.CustomColor.White.DustStorm]
+                            UIColor.CustomColor.White.Gainsboro, UIColor.CustomColor.White.DustStorm, UIColor.CustomColor.Violet.GlossyGrape]
     
 }
 
@@ -23,7 +23,7 @@ extension UIColor {
     struct CustomColor {
         
         struct Violet {
-            
+            static let GlossyGrape = UIColor.init(hex: 0xB58DB6)
         }
         
         struct Red {

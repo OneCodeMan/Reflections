@@ -8,7 +8,7 @@ class PromptViewController: UIViewController {
     var random = RandomModel()
     var backgroundColors = BackgroundColors().backgroundColors
     
-    let contentTypeLabels = ["?", "!", ":"]
+    let contentTypeLabels = ["?", "!", "..."]
     var lists: [[String]]!
     
     @IBOutlet weak var frontView: UIView!
@@ -65,6 +65,10 @@ class PromptViewController: UIViewController {
         self.frontView.backgroundColor = color
         self.backView.backgroundColor = color
         self.view.backgroundColor = color
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
 }
