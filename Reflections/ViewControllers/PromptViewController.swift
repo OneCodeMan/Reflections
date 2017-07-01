@@ -45,6 +45,8 @@ class PromptViewController: UIViewController {
         let answers = content.answersList
         let phrases = content.phraseList
         
+        print(questions.count + answers.count + phrases.count)
+        
         originalList = [content.questionsList, content.answersList, content.phraseList]
         lists = [questions, answers, phrases]
         updatePrompt()

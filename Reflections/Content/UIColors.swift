@@ -4,8 +4,12 @@ import Foundation
 class BackgroundColors {
     
     let backgroundColors = [UIColor.CustomColor.Red.Fuzzy, UIColor.CustomColor.Orange.BigFoot ,UIColor.CustomColor.Blue.Liberty, UIColor.CustomColor.Blue.Sapphire,
-                            UIColor.CustomColor.Yellow.Tan, UIColor.CustomColor.Yellow.Grain, UIColor.CustomColor.Green.LightSea, UIColor.CustomColor.Gray.SilverSand,
-                            UIColor.CustomColor.White.Gainsboro, UIColor.CustomColor.White.DustStorm, UIColor.CustomColor.Violet.GlossyGrape]
+                            UIColor.CustomColor.Blue.Turquoise, UIColor.CustomColor.Yellow.GoldenRod, UIColor.CustomColor.Yellow.Sandstorm, UIColor.CustomColor.Green.Tea,
+                            UIColor.CustomColor.Yellow.Tan, UIColor.CustomColor.Yellow.Grain, UIColor.CustomColor.Green.LightSea, UIColor.CustomColor.Green.AquaMarine,
+                            UIColor.CustomColor.Gray.SilverSand, UIColor.CustomColor.Pink.Thistle, UIColor.CustomColor.Pink.WildWatermelon, UIColor.CustomColor.Green.Pastel,
+                            UIColor.CustomColor.White.Gainsboro, UIColor.CustomColor.White.DustStorm, UIColor.CustomColor.Violet.GlossyGrape, UIColor.CustomColor.Violet.Taupe]
+    
+    // #D84797 the start button
     
 }
 
@@ -24,6 +28,7 @@ extension UIColor {
         
         struct Violet {
             static let GlossyGrape = UIColor.init(hex: 0xB58DB6)
+            static let Taupe = UIColor.init(hex: 0x474056)
         }
         
         struct Red {
@@ -32,24 +37,32 @@ extension UIColor {
         
         struct Orange {
             static let BigFoot = UIColor.init(hex: 0xEE964B)
+            static let Fawn = UIColor.init(hex: 0xDBAD6A)
         }
         
         struct Blue {
             static let Liberty = UIColor.init(hex: 0x4357AD)
             static let Sapphire = UIColor.init(hex: 0x19647E)
+            static let Turquoise = UIColor.init(hex: 0x41EAD4)
         }
         
         struct Yellow {
             static let Tan = UIColor.init(hex: 0xD4B483)
             static let Grain = UIColor.init(hex: 0xF4D35E)
+            static let GoldenRod = UIColor.init(hex: 0xEDDEA4)
+            static let Sandstorm = UIColor.init(hex: 0xEAD94C)
         }
         
         struct Green {
             static let LightSea = UIColor.init(hex: 0x28AFB0)
+            static let AquaMarine = UIColor.init(hex: 0x8DFFCD)
+            static let Pastel = UIColor.init(hex: 0x7DCD85)
+            static let Tea = UIColor.init(hex: 0xC2F8CB)
         }
         
         struct Pink {
-            
+            static let Thistle = UIColor.init(hex: 0xE0BAD7)
+            static let WildWatermelon = UIColor.init(hex: 0xED6B86)
         }
         
         struct Gray {
