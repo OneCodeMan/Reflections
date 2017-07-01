@@ -2,7 +2,7 @@ import UIKit
 
 class PromptViewController: UIViewController {
     var flippedView = false
-    var canFlip = true 
+    var canFlip = true
     
     var content = Content()
     var random = RandomModel()
@@ -26,7 +26,7 @@ class PromptViewController: UIViewController {
         let fromView = flippedView ? frontView : backView
         let toView = flippedView ? backView : frontView
         
-        canFlip = fromView == frontView ? true : false
+        canFlip = fromView == backView ? true : false
         
         UIView.transition(from: fromView!, to: toView!, duration: 0.4, options: [.transitionFlipFromLeft, .showHideTransitionViews])
     }
@@ -48,9 +48,7 @@ class PromptViewController: UIViewController {
             let randomPromptIndex = random.generateRandomIndex(from: lists[randomTypeIndex])
             promptTypeLabel.text = contentTypeLabels[randomTypeIndex]
             promptTextLabel.text = lists[randomTypeIndex][randomPromptIndex]
-        } else {
-            print("Can't flip")
-        }
+        } 
     }
     
 }
