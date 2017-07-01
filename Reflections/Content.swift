@@ -15,7 +15,7 @@ class Content {
                        "Write about the things that make you feel alive.",
                        "Write about a time you felt deeply embarrassed. What happened? Who was there? Why did you feel so embarassed?"]
     
-    var phraseList = ["I have at least one person I can act vulnerable with."
+    var phraseList = ["I have at least one person I can be vulnerable with."
                      ]
     
 }

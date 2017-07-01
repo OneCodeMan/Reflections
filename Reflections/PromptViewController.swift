@@ -7,7 +7,7 @@ class PromptViewController: UIViewController {
     var content = Content()
     var random = RandomModel()
     
-    let contentTypeLabels = ["?", "!", "."]
+    let contentTypeLabels = ["?", "!", ":"]
     var lists: [[String]]!
     
     @IBOutlet weak var frontView: UIView!
