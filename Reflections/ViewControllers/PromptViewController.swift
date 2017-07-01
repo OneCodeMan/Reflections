@@ -10,6 +10,7 @@ class PromptViewController: UIViewController {
     
     let contentTypeLabels = ["?", "!", "..."]
     var lists: [[String]]!
+    var originalList: [[String]]!
     
     @IBOutlet weak var frontView: UIView!
     @IBOutlet weak var promptTypeLabel: UILabel!
@@ -40,28 +41,45 @@ class PromptViewController: UIViewController {
         promptTextLabel.textColor = UIColor.CustomColor.Black.Licorice
         backInstructionLabel.textColor = UIColor.CustomColor.Black.Licorice
         
-        lists = [content.questionsList, content.answersList, content.phraseList]
+        let questions = content.questionsList
+        let answers = content.answersList
+        let phrases = content.phraseList
+        
+        originalList = [content.questionsList, content.answersList, content.phraseList]
+        lists = [questions, answers, phrases]
         updatePrompt()
         
         swipeRightGesture.addTarget(self, action: #selector(updatePrompt))
         swipeRightGesture.direction = .right
         self.view!.addGestureRecognizer(swipeRightGesture)
         
-        fadeLabel(label: backInstructionLabel, delay: 0.5)
-        fadeLabel(label: frontInstructionLabel, delay: 0.5)
+        fadeLabel(label: backInstructionLabel, delay: 0)
+        fadeLabel(label: frontInstructionLabel, delay: 0)
     }
     
     @objc func updatePrompt() {
+        
         if (canFlip) {
             let randomTypeIndex = random.generateRandomIndex(from: lists)
             let randomPromptIndex = random.generateRandomIndex(from: lists[randomTypeIndex])
+            var currentList = lists[randomTypeIndex]
+            
             promptTypeLabel.text = contentTypeLabels[randomTypeIndex]
             promptTextLabel.text = lists[randomTypeIndex][randomPromptIndex]
+            
+            currentList.remove(at: randomPromptIndex) // avoid duplicates
+            
             changeBackgroundColor()
             
             fadeLabel(label: backInstructionLabel, delay: 0.5)
             fadeLabel(label: frontInstructionLabel, delay: 0.5)
-        } 
+            
+            if (currentList.count < 2) {
+                currentList = originalList[randomTypeIndex]
+            }
+            
+        }
+        
     }
     
     // MARK: Background color helper 
