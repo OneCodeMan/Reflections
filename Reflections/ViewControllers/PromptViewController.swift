@@ -46,6 +46,9 @@ class PromptViewController: UIViewController {
         swipeRightGesture.addTarget(self, action: #selector(updatePrompt))
         swipeRightGesture.direction = .right
         self.view!.addGestureRecognizer(swipeRightGesture)
+        
+        fadeLabel(label: backInstructionLabel, delay: 0.5)
+        fadeLabel(label: frontInstructionLabel, delay: 0.5)
     }
     
     @objc func updatePrompt() {
@@ -55,6 +58,9 @@ class PromptViewController: UIViewController {
             promptTypeLabel.text = contentTypeLabels[randomTypeIndex]
             promptTextLabel.text = lists[randomTypeIndex][randomPromptIndex]
             changeBackgroundColor()
+            
+            fadeLabel(label: backInstructionLabel, delay: 0.5)
+            fadeLabel(label: frontInstructionLabel, delay: 0.5)
         } 
     }
     
@@ -67,6 +73,22 @@ class PromptViewController: UIViewController {
         self.view.backgroundColor = color
     }
     
+    // MARK: Animations
+    func fadeLabel(label: UILabel, delay: TimeInterval) {
+        let animationDuration = 3.0
+        
+        UIView.animate(withDuration: animationDuration, delay: 3.0, animations: { () -> Void in
+            label.alpha = 1.0
+        }) { (Bool) -> Void in
+            
+            UIView.animate(withDuration: animationDuration, delay: delay, options: [.curveEaseOut, .autoreverse, .repeat], animations: { () -> Void in
+                label.alpha = 0
+            }, completion: nil)
+        }
+        
+    }
+    
+    // MARK: Hide status bar
     override var prefersStatusBarHidden: Bool {
         return true
     }

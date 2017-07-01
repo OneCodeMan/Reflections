@@ -10,7 +10,7 @@ class Content {
                          "What characteristics do you think people dislike about you?",
                          "What are you materialistic about?",
                          "What makes you different?",
-                         "Where do you feel most comfortable at?",
+                         "Where do you feel most comfortable?",
                          "When was the last time you cried?",
                          "What do you wish you could tell your five year old self?",
                          "What is something you are afraid to admit?",
