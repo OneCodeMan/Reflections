@@ -1,4 +1,13 @@
 import UIKit
+import Foundation
+
+class BackgroundColors {
+    
+    let backgroundColors = [UIColor.CustomColor.Red.Fuzzy, UIColor.CustomColor.Orange.BigFoot ,UIColor.CustomColor.Blue.Liberty, UIColor.CustomColor.Blue.Sapphire,
+                            UIColor.CustomColor.Yellow.Tan, UIColor.CustomColor.Yellow.Grain, UIColor.CustomColor.Green.LightSea, UIColor.CustomColor.Gray.SilverSand,
+                            UIColor.CustomColor.White.Gainsboro, UIColor.CustomColor.White.DustStorm]
+    
+}
 
 extension UIColor {
     
@@ -18,19 +27,25 @@ extension UIColor {
         }
         
         struct Red {
-            
+            static let Fuzzy = UIColor.init(hex: 0xC1666B)
+        }
+        
+        struct Orange {
+            static let BigFoot = UIColor.init(hex: 0xEE964B)
         }
         
         struct Blue {
-            
+            static let Liberty = UIColor.init(hex: 0x4357AD)
+            static let Sapphire = UIColor.init(hex: 0x19647E)
         }
         
         struct Yellow {
-            
+            static let Tan = UIColor.init(hex: 0xD4B483)
+            static let Grain = UIColor.init(hex: 0xF4D35E)
         }
         
         struct Green {
-            
+            static let LightSea = UIColor.init(hex: 0x28AFB0)
         }
         
         struct Pink {
@@ -38,11 +53,12 @@ extension UIColor {
         }
         
         struct Gray {
-            
+            static let SilverSand = UIColor.init(hex: 0xBFCBC2)
         }
         
         struct White {
-            
+            static let Gainsboro = UIColor.init(hex: 0xE4DFDA)
+            static let DustStorm = UIColor.init(hex: 0xD8CBC7)
         }
         
         struct Black {

@@ -6,6 +6,7 @@ class PromptViewController: UIViewController {
     
     var content = Content()
     var random = RandomModel()
+    var backgroundColors = BackgroundColors().backgroundColors
     
     let contentTypeLabels = ["?", "!", ":"]
     var lists: [[String]]!
@@ -53,12 +54,14 @@ class PromptViewController: UIViewController {
             let randomPromptIndex = random.generateRandomIndex(from: lists[randomTypeIndex])
             promptTypeLabel.text = contentTypeLabels[randomTypeIndex]
             promptTextLabel.text = lists[randomTypeIndex][randomPromptIndex]
-            changeBackgroundColor(to: .red)
+            changeBackgroundColor()
         } 
     }
     
     // MARK: Background color helper 
-    func changeBackgroundColor(to color: UIColor) {
+    func changeBackgroundColor() {
+        let randomColorIndex = random.generateRandomIndex(from: backgroundColors)
+        let color = backgroundColors[randomColorIndex]
         self.frontView.backgroundColor = color
         self.backView.backgroundColor = color
         self.view.backgroundColor = color
