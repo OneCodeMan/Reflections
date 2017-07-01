@@ -7,7 +7,7 @@ class PromptViewController: UIViewController {
     var content = Content()
     var random = RandomModel()
     
-    let contentTypeLabels = ["?", "!"]
+    let contentTypeLabels = ["?", "!", "."]
     var lists: [[String]]!
     
     @IBOutlet weak var frontView: UIView!
@@ -34,7 +34,7 @@ class PromptViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        lists = [content.questionsList, content.answersList]
+        lists = [content.questionsList, content.answersList, content.phraseList]
         updatePrompt()
         
         swipeRightGesture.addTarget(self, action: #selector(updatePrompt))
