@@ -105,7 +105,7 @@ class PromptViewController: UIViewController {
         
         UIView.animate(withDuration: animationDuration, delay: 3.0, animations: { () -> Void in
             label.alpha = 1.0
-        }) { (Bool) -> Void in
+        }) { (ool) -> Void in
             
             UIView.animate(withDuration: animationDuration, delay: delay, options: [.curveEaseOut, .autoreverse, .repeat], animations: { () -> Void in
                 label.alpha = 0
